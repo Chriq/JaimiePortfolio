@@ -1,0 +1,135 @@
+@use '@angular/material' as mat;
+@use 'SASS:map';
+
+@include mat.elevation-classes();
+@include mat.app-background();
+// @include mat.all-component-themes()
+
+:root {
+    --bg-primary: #8DA3D3;
+    --bg-secondary: #8DA3D3;
+    --bg-elevated: #f2e1e3;
+
+    --text-primary: #3f4dea;
+    --text-secondary: #FFAACF;
+    --text-inverse: #0E1320;
+
+    --accent: #e9bbc3;
+    --accent-muted: rgba(198, 178, 124, 0.4);
+
+    --border-subtle: rgba(232, 227, 216, 0.08);
+    --border-strong: rgba(232, 227, 216, 0.16);
+
+    --font-family: 'cormorantgaramond-light', 'cormorantgaramond', "cormorant garamond", serif;
+
+    --transition-fast: 120ms ease;
+    --transition-medium: 240ms ease;
+
+    --header-size: clamp(1.5rem, 4vw + 1rem, 4rem);
+    --sub-header-size: clamp(1rem, 1vw + 1rem, 2rem);
+
+    --header-height: clamp(1.5rem, 4vw + 4rem, 8rem);
+
+    @include mat.select-overrides((panel-background-color: var(--bg-primary),
+            enabled-trigger-text-color: var(--text-primary),
+        ));
+}
+
+html,
+body {
+    height: 100%;
+    --mat-menu-container-color: var(--bg-secondary);
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+
+    margin: 0;
+    height: fit-content;
+}
+
+.mat-app-background {
+    background-color: #000 !important;
+}
+
+a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+h1 {
+    font-size: var(--header-size);
+}
+
+h2 {
+    font-size: var(--sub-header-size);
+}
+
+
+.mat-mdc-menu-item {
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.mat-mdc-menu-item:hover {
+    background-color: var(--bg-elevated) !important;
+    color: var(--accent);
+}
+
+button.form-button {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--border-strong);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition:
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    font-size: large;
+}
+
+button.form-button:not(:disabled):hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+button.form-button:disabled {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    cursor: default;
+}
+
+.link {
+    transition:
+        color var(--transition-fast);
+}
+
+button.link:hover {
+    color: var(--accent);
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-primary) inset !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}

@@ -1,0 +1,28 @@
+.social-links-overlay {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    place-self: center;
+
+    a {
+        height: 100%;
+    }
+
+    img {
+        // width: 64px;
+        // max-width: 100%;
+        // height: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        display: block;
+        // filter: brightness(0) saturate(100%) invert(97%) sepia(50%) saturate(1081%) hue-rotate(319deg) brightness(84%) contrast(81%);
+    }
+}
+
+.social-links-overlay img:hover {
+    filter: brightness(0) saturate(100%) invert(90%) sepia(8%) saturate(230%) hue-rotate(3deg) brightness(98%) contrast(98%);
+}

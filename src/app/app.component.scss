@@ -1,0 +1,23 @@
+.app-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.outlet-container {
+    flex: 1 0 auto;
+    margin: 0 0 0 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+    bottom: 0;
+}

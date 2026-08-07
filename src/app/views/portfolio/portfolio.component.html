@@ -1,0 +1,16 @@
+<h1 style="width: 50%; margin-left: auto; margin-right: auto; text-align: center; margin-top: 300px;">
+    Under Construction!
+</h1>
+
+@if (displayedProjects) {
+<div class="portfolio-container">
+    @for (project of displayedProjects; track project; let i = $index; let last = $last) {
+    <div class="project-card" [ngClass]="{ 'reverse': i % 2 !== 0 }">
+
+    </div>
+    @if (!last) {
+    <mat-divider></mat-divider>
+    }
+    }
+</div>
+}
