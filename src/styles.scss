@@ -7,11 +7,11 @@
 
 :root {
     --bg-primary: #8DA3D3;
-    --bg-secondary: #8DA3D3;
+    --bg-secondary: #d0dcf4;
     --bg-elevated: #f2e1e3;
 
-    --text-primary: #3f4dea;
-    --text-secondary: #FFAACF;
+    --text-primary: #38409c;
+    --text-secondary: #d17988;
     --text-inverse: #0E1320;
 
     --accent: #e9bbc3;
@@ -58,6 +58,10 @@ a {
     color: var(--text-secondary);
     text-decoration: none;
     transition: color var(--transition-fast);
+}
+
+a::hover {
+    color: var(--accent);
 }
 
 h1 {
