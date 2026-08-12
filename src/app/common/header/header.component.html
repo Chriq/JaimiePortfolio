@@ -36,7 +36,9 @@
         <a (click)="closeMenu()" class="close-btn">&times;</a>
         <div class="overlay-content">
             @for (item of menuOptions; track item) {
-            <a (click)="navigateTo(item); closeMenu()">{{item}}</a>
+            <button mat-button class="link" (click)='navigateTo(item); closeMenu();'>
+                <span>{{item}}</span>
+            </button>
             }
             <app-social-links></app-social-links>
         </div>
