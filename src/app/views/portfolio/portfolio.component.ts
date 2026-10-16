@@ -5,10 +5,12 @@ import { ProjectService } from '../../services/project.service';
 import { Router } from '@angular/router';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MoviesComponent } from './movies/movies.component';
+import { SwipeRevealDirective } from '../../directives/swipe-reveal.directive';
 
 @Component({
     selector: 'app-portfolio',
-    imports: [CommonModule, MatDividerModule, MatTabsModule],
+    imports: [CommonModule, MatDividerModule, MatTabsModule, MoviesComponent, SwipeRevealDirective],
     templateUrl: './portfolio.component.html',
     changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './portfolio.component.scss'

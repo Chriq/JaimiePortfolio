@@ -12,6 +12,6 @@ export class SocialLinksComponent implements OnInit {
 
     ngOnInit() {
         const rootStyles = getComputedStyle(document.documentElement);
-        this.linkColor = rootStyles.getPropertyValue('--accent').trim().replaceAll("#", "");
+        this.linkColor = rootStyles.getPropertyValue('--text-secondary').trim().replaceAll("#", "");
     }
 }

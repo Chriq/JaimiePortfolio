@@ -1,10 +1,11 @@
 .contact-form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 32px auto;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     padding: 0 10% 10% 10%;
+    font-size: 16px;
 }
 
 .form-row-half {
@@ -35,4 +36,17 @@ span {
     font-size: large;
     text-align: center;
     margin: 0 16px 16px 16px;
+}
+
+@media (max-width: 1200px) {
+    .contact-form {
+        margin-top: -50px;
+        gap: 0px;
+        justify-content: center;
+    }
+
+    input,
+    textarea {
+        padding: 0px;
+    }
 }

@@ -18,9 +18,35 @@
     box-sizing: border-box;
 }
 
+.header {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    height: 80px;
+    align-content: center;
+}
+
 .footer {
     width: 100%;
     bottom: 0;
     z-index: 999;
     bottom: 0;
+}
+
+.logo {
+    width: auto;
+    height: 80px;
+    align-self: center;
+    margin-top: 32px;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1200px) {
+    .logo {
+        height: 40px;
+        margin-top: 16px;
+    }
 }

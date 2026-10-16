@@ -1,0 +1,19 @@
+<div class="gallery">
+    @for (poster of posters; track poster.file) {
+    <figure class="poster" tabindex="0">
+        <img [src]="'film-posters/' + poster.file" [alt]="poster.title" loading="lazy" />
+
+        <figcaption class="tooltip">
+            <strong>{{ poster.title }}</strong>
+            @if (poster.year || poster.role) {
+            <span class="meta">
+                {{ poster.role }}@if (poster.year && poster.role) { · }{{ poster.year }}
+            </span>
+            }
+            @if (poster.description) {
+            <p>{{ poster.description }}</p>
+            }
+        </figcaption>
+    </figure>
+    }
+</div>

@@ -1,0 +1,52 @@
+.gallery {
+    columns: 3;
+    column-gap: 8px;
+}
+
+.poster {
+    position: relative;
+    margin: 0 0 8px;
+    break-inside: avoid;
+    overflow: hidden;
+}
+
+.poster img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.tooltip {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 32px 12px 0;
+    color: #fff;
+    background: linear-gradient(transparent, 30%, rgba(0, 0, 0, 0.85));
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+}
+
+.poster:hover .tooltip,
+.poster:focus-within .tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tooltip .meta {
+    display: block;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.tooltip p {
+    margin: 6px 0 0;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        columns: 2;
+    }
+}
