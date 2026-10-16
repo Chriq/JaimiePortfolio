@@ -2,7 +2,7 @@
     <nav class="nav-links">
         @for (item of menuOptions; track item) {
         <button mat-button class="link" (click)='navigateTo(item)'>
-            <h2>{{item}}</h2>
+            <span>{{item}}</span>
         </button>
         }
     </nav>
