@@ -3,7 +3,7 @@ import { SwipeRevealDirective } from '../../directives/swipe-reveal.directive';
 
 @Component({
     selector: 'app-about',
-    imports: [],
+    imports: [SwipeRevealDirective],
     templateUrl: './about.component.html',
     changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './about.component.scss'

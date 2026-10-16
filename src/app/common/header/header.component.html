@@ -1,30 +1,9 @@
 <header class="header">
     <nav class="nav-links">
         @for (item of menuOptions; track item) {
-        @if (item !== 'Portfolio') {
         <button mat-button class="link" (click)='navigateTo(item)'>
-            <h2>{{item}}</h2>
+            <span>{{item}}</span>
         </button>
-        }
-        @if (item === 'Portfolio') {
-        <div class="nav-item" routerLinkActive="active"
-            (mouseenter)="targetMenuTrigger = createPlanmenuTrigger; mouseEnter(createPlanmenuTrigger)"
-            (mouseleave)="mouseLeave(createPlanmenuTrigger)">
-            <button mat-button class="link" #createPlanmenuTrigger="matMenuTrigger" [matMenuTriggerFor]="createPlan"
-                (click)='navigateTo(item)'>
-                <h2>Portfolio</h2>
-            </button>
-            <mat-menu #createPlan="matMenu" [hasBackdrop]="false" [overlapTrigger]="false">
-                <div (mouseenter)="mouseEnter(targetMenuTrigger)" (mouseleave)="mouseLeave(targetMenuTrigger)">
-                    @for (item of portfolioSubMenu; track item) {
-                    <button mat-menu-item (click)="navigateTo('Portfolio', item)">
-                        <h3>{{item}}</h3>
-                    </button>
-                    }
-                </div>
-            </mat-menu>
-        </div>
-        }
         }
     </nav>
 

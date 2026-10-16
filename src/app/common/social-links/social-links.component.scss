@@ -8,6 +8,16 @@
 
     a {
         height: 100%;
+        position: relative;
+
+        .bg {
+            background-color: white;
+            width: 55px;
+            height: 40px;
+            position: absolute;
+            top: 12px;
+            left: 10px;
+        }
     }
 
     img {
@@ -15,9 +25,11 @@
         height: 100%;
         object-fit: contain;
         display: block;
+        position: relative;
+        z-index: 1;
     }
 }
 
 .social-links-overlay img:hover {
-    filter: brightness(0) saturate(100%) invert(90%) sepia(8%) saturate(230%) hue-rotate(3deg) brightness(98%) contrast(98%);
+    filter: brightness(0) saturate(100%) invert(70%) sepia(12%) saturate(1005%) hue-rotate(304deg) brightness(111%) contrast(92%);
 }

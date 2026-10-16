@@ -1,8 +1,10 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { PortfolioComponent } from '../portfolio/portfolio.component';
+import { SwipeRevealDirective } from '../../directives/swipe-reveal.directive';
 
 @Component({
     selector: 'app-home',
-    imports: [],
+    imports: [PortfolioComponent, SwipeRevealDirective],
     templateUrl: './home.component.html',
     changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './home.component.scss'

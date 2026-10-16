@@ -10,11 +10,11 @@
     --bg-secondary: #d0dcf4;
     --bg-elevated: #f2e1e3;
 
-    --text-primary: #38409c;
-    --text-secondary: #d17988;
+    --text-primary: #354def;
+    --text-secondary: #e793a0;
     --text-inverse: #0E1320;
 
-    --accent: #e9bbc3;
+    --accent: #ddbbc0;
     --accent-muted: rgba(198, 178, 124, 0.4);
 
     --border-subtle: rgba(232, 227, 216, 0.08);
@@ -28,7 +28,7 @@
     --header-size: clamp(1.5rem, 4vw + 1rem, 4rem);
     --sub-header-size: clamp(1rem, 1vw + 1rem, 2rem);
 
-    --header-height: clamp(1.5rem, 4vw + 4rem, 8rem);
+    --radius-md: 8px;
 
     @include mat.select-overrides((panel-background-color: var(--bg-primary),
             enabled-trigger-text-color: var(--text-primary),
@@ -38,6 +38,7 @@
 html,
 body {
     height: 100%;
+    font-size: 24px;
     --mat-menu-container-color: var(--bg-secondary);
 }
 
@@ -45,6 +46,7 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: var(--font-family);
+    font-size: 1rem;
 
     margin: 0;
     height: fit-content;
@@ -58,6 +60,7 @@ a {
     color: var(--text-secondary);
     text-decoration: none;
     transition: color var(--transition-fast);
+    cursor: pointer;
 }
 
 a::hover {
@@ -120,7 +123,18 @@ button.form-button:disabled {
 }
 
 button.link:hover {
-    color: var(--accent);
+    color: var(--text-secondary);
+}
+
+
+.bg-reveal {
+    opacity: 0;
+    transition:
+        opacity 0.4s ease-out;
+}
+
+.bg-reveal.revealed {
+    opacity: 1;
 }
 
 
