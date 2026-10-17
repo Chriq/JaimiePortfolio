@@ -2,7 +2,7 @@
     <!-- <div class="photo-container">
         <img src="photos/bio.png" alt="Profile Photo" class="wipe-reveal" swipeReveal />
     </div> -->
-    <h2>TESTIMONIALS</h2>
+    <!-- <h2>TESTIMONIALS</h2>
     <h3>Jole Sanchez ("VS", 2023)</h3>
 
     <div class="text-container">
@@ -17,6 +17,16 @@
             amazing for
             this project! Hopefully we'll get to work on something else in the near future!"
         </p>
-    </div>
+    </div> -->
+
+    <h2>TESTIMONIALS</h2>
+    <app-carousel [items]="testimonials">
+        <ng-template let-t>
+            <div style="margin-left: 64px;margin-right: 64px;">
+                <h3>{{t.name}} ("{{t.project}}", {{t.year}})</h3>
+                <p class="text-reveal" swipeReveal>{{t.quote}}</p>
+            </div>
+        </ng-template>
+    </app-carousel>
 
 </div>

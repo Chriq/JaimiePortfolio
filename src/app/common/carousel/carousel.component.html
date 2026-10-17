@@ -1,0 +1,20 @@
+<div class="carousel">
+    <div class="track" [style.transform]="'translateX(-' + current() * 100 + '%)'">
+        @for (item of items(); track $index; let i = $index) {
+        <div class="slide">
+            <ng-container *ngTemplateOutlet="slideTemplate(); context: { $implicit: item, index: i }">
+            </ng-container>
+        </div>
+        }
+    </div>
+
+    <button class="arrow left" (click)="prev()" aria-label="Previous">‹</button>
+    <button class="arrow right" (click)="next()" aria-label="Next">›</button>
+
+    <div class="dots">
+        @for (item of items(); track $index; let i = $index) {
+        <button class="dot" [class.active]="i === current()" (click)="goTo(i)"
+            [attr.aria-label]="'Go to slide ' + (i + 1)"></button>
+        }
+    </div>
+</div>

@@ -16,8 +16,8 @@ interface Poster {
 })
 export class MoviesComponent {
     posters: Poster[] = [
-        { file: '_Lunar_Clips_Ambient_Soundscapes_Montage_Pack_Cover_Art.jpg', title: 'Lunar Clips Ambient Soundscapes Montage Pack', year: 2024, description: "Test Desc" },
-        { file: '_Maharlika_Montage_Pack_Cover_Art.jpg', title: 'Maharlika Montage Pack' },
+        { file: 'LunarEclipse.jpg', title: 'Lunar Clips Ambient Soundscapes Montage Pack', year: 2024, description: "Test Desc" },
+        { file: 'Maharlika.jpg', title: 'Maharlika Montage Pack' },
         { file: 'Change Can Dunk.webp', title: 'Change Can Dunk' },
         { file: 'Connection (with Credits).jpg', title: 'Connection' },
         { file: 'Ganito Ganyan Ganoon (This, That and Everything in Between).jpg', title: 'Ganito Ganyan Ganoon' },
