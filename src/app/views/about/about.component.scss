@@ -1,6 +1,6 @@
 .background {
     background-image: url('/branding/about-bg.jpg');
-    padding: 64px;;
+    padding: 64px;
 }
 
 .about-container {
@@ -80,5 +80,10 @@ p {
 
     .photo-container {
         margin-top: -16px;
+    }
+
+    .background {
+        background-image: none;
+        padding: 0;
     }
 }

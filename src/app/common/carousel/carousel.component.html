@@ -1,9 +1,9 @@
 <div class="carousel-container">
-    <button mat-mini-fab class="glass-btn" (click)="prev()" aria-label="Previous" style="top: 30%;left: -2%;">
+    <button mat-mini-fab class="glass-btn nav" (click)="prev()" aria-label="Previous" style="top: 30%;left: -2%;">
         <mat-icon>arrow_left</mat-icon>
     </button>
 
-    <div class="carousel">
+    <div class="carousel" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
         <div class="track" [style.transform]="'translateX(-' + current() * 100 + '%)'">
             @for (item of items(); track $index; let i = $index) {
             <div class="slide">
@@ -21,7 +21,7 @@
         </div>
     </div>
     
-    <button mat-mini-fab class="glass-btn" (click)="next()" aria-label="Next" style="top: 30%;right: -2%;">
+    <button mat-mini-fab class="glass-btn nav" (click)="next()" aria-label="Next" style="top: 30%;right: -2%;">
         <mat-icon>arrow_right</mat-icon>
     </button>
 </div>

@@ -3,6 +3,7 @@
     overflow: hidden;
     max-width: 800px;
     margin: 0 auto;
+    touch-action: pan-y;
 }
 
 .carousel-container {
@@ -71,4 +72,15 @@
 .dot.active {
     background: #fff;
     transform: scale(1.3);
+}
+
+    
+@media (max-width: 1200px) {
+    .carousel {
+        max-width: 350px;
+    }
+
+    .nav {
+        transform: translateY(-50%) scale(0.8);
+    }
 }
