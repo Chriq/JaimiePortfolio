@@ -29,4 +29,17 @@ export class CarouselComponent {
     goTo(index: number) {
         this.current.set(index);
     }
+
+    private touchStartX = 0;
+
+    onTouchStart(e: TouchEvent) {
+        this.touchStartX = e.changedTouches[0].clientX;
+    }
+
+    onTouchEnd(e: TouchEvent) {
+        const delta = e.changedTouches[0].clientX - this.touchStartX;
+        const threshold = 50;
+        if (delta > threshold) this.prev();
+        else if (delta < -threshold) this.next();
+    }
 }
