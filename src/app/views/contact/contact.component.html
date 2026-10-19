@@ -5,11 +5,8 @@
     @if (error) {
     <div class="error-message">{{ error }}</div>
     }
-    <!-- 
-    <h2 style="width: 80%; margin-left: auto; margin-right: auto; text-align: center; margin-bottom: 32px;">
-        Please note, the contact form is currently disabled. Contact info is available on my
-        <a href="https://play.reelcrafter.com/iiF7nMHRRLyXb8YpcABoIA">Reelcrafter</a>.
-    </h2> -->
+
+    <h2 style="font-weight: 100;width: 100%;text-align: center;">Contact</h2>
 
     <mat-form-field class="form-row-half">
         <mat-label>First Name</mat-label>
@@ -26,14 +23,14 @@
         <input matInput type="email" formControlName="email" />
     </mat-form-field>
 
-    <mat-form-field class="form-row">
+    <!-- <mat-form-field class="form-row">
         <mat-label>Company</mat-label>
         <input matInput type="text" formControlName="company" />
-    </mat-form-field>
+    </mat-form-field> -->
 
     <mat-form-field class="form-row">
         <mat-label>Subject</mat-label>
-        <input matInput type="text" formControlName="subject" />
+        <input matInput type="text" formControlName="title" />
     </mat-form-field>
 
     <mat-form-field class="form-row">
@@ -41,7 +38,7 @@
         <textarea matInput formControlName="message" rows="5"></textarea>
     </mat-form-field>
 
-    <button mat-button class="form-button" type="submit" [disabled]="true || !contactForm.valid || sending">
+    <button mat-button class="form-button" type="submit" [disabled]="!contactForm.valid || sending">
         <mat-icon>mail</mat-icon>
         <h3>{{ sending ? 'Sending...' : 'Send Message' }}</h3>
     </button>

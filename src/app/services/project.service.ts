@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Project } from '../interfaces/media';
+import { Project, Testimonial } from '../interfaces/media';
 import { Observable, of, BehaviorSubject, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -34,5 +34,10 @@ export class ProjectService {
         }
 
         return map;
+    }
+
+    loadTestimonials(): Observable<Testimonial[]> {
+        let p: Testimonial[] = require('../../data/testimonials.json');
+        return of(p);
     }
 }

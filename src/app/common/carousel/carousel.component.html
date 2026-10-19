@@ -1,0 +1,27 @@
+<div class="carousel-container">
+    <button mat-mini-fab class="glass-btn" (click)="prev()" aria-label="Previous" style="top: 30%;left: -2%;">
+        <mat-icon>arrow_left</mat-icon>
+    </button>
+
+    <div class="carousel">
+        <div class="track" [style.transform]="'translateX(-' + current() * 100 + '%)'">
+            @for (item of items(); track $index; let i = $index) {
+            <div class="slide">
+                <ng-container *ngTemplateOutlet="slideTemplate(); context: { $implicit: item, index: i }">
+                </ng-container>
+            </div>
+            }
+        </div>
+
+        <div class="dots">
+            @for (item of items(); track $index; let i = $index) {
+            <button class="dot" [class.active]="i === current()" (click)="goTo(i)"
+                [attr.aria-label]="'Go to slide ' + (i + 1)"></button>
+            }
+        </div>
+    </div>
+    
+    <button mat-mini-fab class="glass-btn" (click)="next()" aria-label="Next" style="top: 30%;right: -2%;">
+        <mat-icon>arrow_right</mat-icon>
+    </button>
+</div>
