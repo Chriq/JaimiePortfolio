@@ -1,10 +1,12 @@
 import { Component, contentChild, input, signal, TemplateRef } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-carousel',
     standalone: true,
-    imports: [NgTemplateOutlet],
+    imports: [NgTemplateOutlet, MatButtonModule, MatIconModule],
     templateUrl: './carousel.component.html',
     styleUrl: './carousel.component.scss',
 })

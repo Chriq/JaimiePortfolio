@@ -6,7 +6,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-import { ConnectedPosition } from '@angular/cdk/overlay';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { SocialLinksComponent } from '../social-links/social-links.component';
 
@@ -25,17 +24,11 @@ export class HeaderComponent {
     menuOpen = false;
 
     menuOptions: string[] = [
-        "Home",
         "Portfolio",
         "Testimonials",
         "About",
         "Contact"
     ];
-
-    portfolioSubMenu: string[] = [
-        "Music",
-        "Sound Design"
-    ]
 
     p = "Portfolio";
 
@@ -48,30 +41,13 @@ export class HeaderComponent {
     }
 
     navigateTo(route: string, option?: string) {
-        let params = {
-            queryParams: { filters: [] }
-        };
+        const id = route.toLowerCase();
 
-        if (option) params.queryParams.filters = [option];
-
-        this.router.navigate([route.toLowerCase()], params);
-    }
-
-
-
-
-    public timedOutCloser;
-    public targetMenuTrigger;
-    mouseEnter(trigger) {
-        if (this.timedOutCloser) {
-            clearTimeout(this.timedOutCloser);
-        }
-        trigger.openMenu();
-    }
-
-    mouseLeave(trigger) {
-        this.timedOutCloser = setTimeout(() => {
-            trigger.closeMenu();
-        }, 50);
+        this.router
+        .navigate(['/'], {
+            queryParams: option ? { filters: [option] } : {},
+            fragment: id,
+        })
+        .then(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }));
     }
 }

@@ -46,6 +46,12 @@
     }
 }
 
+app-scroll-button {
+    position: sticky;
+    bottom: 0;
+    margin-left: auto;
+}
+
 @media (max-width: 1200px) {
     .logo {
         height: 40px;
