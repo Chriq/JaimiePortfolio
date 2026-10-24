@@ -2,11 +2,11 @@
     <h2>TESTIMONIALS</h2>
     <app-carousel [items]="testimonials">
         <ng-template let-t>
-            <div style="margin-left: 64px;margin-right: 64px;">
+            <div style="justify-items: center;">
                 <h3>
                     {{t.name}} ("{{t.project}}"
                     @if(t.year) {
-                        , {{t.year}}
+                    , {{t.year}}
                     }
                     )
                 </h3>

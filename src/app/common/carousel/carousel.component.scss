@@ -1,9 +1,14 @@
 .carousel {
     position: relative;
     overflow: hidden;
-    max-width: 800px;
     margin: 0 auto;
     touch-action: pan-y;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.nav {
+    flex: 0 0 auto;
 }
 
 .carousel-container {
@@ -21,6 +26,8 @@
 
 .slide {
     flex: 0 0 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .slide img {
@@ -74,13 +81,9 @@
     transform: scale(1.3);
 }
 
-    
-@media (max-width: 1200px) {
-    .carousel {
-        max-width: 350px;
-    }
 
+@media (max-width: 1200px) {
     .nav {
-        transform: translateY(-50%) scale(0.8);
+        display: none;
     }
 }
