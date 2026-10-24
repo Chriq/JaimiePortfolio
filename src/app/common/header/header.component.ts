@@ -44,10 +44,10 @@ export class HeaderComponent {
         const id = route.toLowerCase();
 
         this.router
-        .navigate(['/'], {
-            queryParams: option ? { filters: [option] } : {},
-            fragment: id,
-        })
-        .then(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }));
+            .navigate(['/'], {
+                queryParams: option ? { filters: [option] } : {},
+                fragment: id,
+            })
+            .then(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }));
     }
 }

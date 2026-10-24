@@ -36,7 +36,6 @@ img {
 }
 
 p {
-    font-size: 0.8em;
     text-align: justify;
 }
 
@@ -85,5 +84,9 @@ p {
     .background {
         background-image: none;
         padding: 0;
+    }
+
+    p {
+        font-size: 0.7em;
     }
 }

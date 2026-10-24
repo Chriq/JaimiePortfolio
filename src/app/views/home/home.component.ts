@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         private location: Location,
         private router: Router,
         private destroyRef: DestroyRef
-    ) {}
+    ) { }
     ngOnInit() {
         window.addEventListener('message', (e) => {
             if (e.data && e.data.type === 'resize' && e.data.height) {
@@ -46,10 +46,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
 
     private setFragment(id: string) {
-        const [path] = this.router.url.split('/');
-        const current = this.router.url.split('/')[1];
+        const [path] = this.router.url.split('#');
+        const current = this.router.url.split('#')[1];
         if (current === id) return;
-        this.location.replaceState(`${path}/${id}`);
+        this.location.replaceState(`${path}#${id}`);
     }
 }
 
