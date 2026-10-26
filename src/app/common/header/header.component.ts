@@ -24,9 +24,9 @@ export class HeaderComponent {
     menuOpen = false;
 
     menuOptions: string[] = [
+        "About",
         "Portfolio",
         "Testimonials",
-        "About",
         "Contact"
     ];
 

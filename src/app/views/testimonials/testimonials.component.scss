@@ -31,11 +31,19 @@ p {
     transform: translateY(0);
 }
 
-h2,
+h2 {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    justify-self: center;
+    letter-spacing: 8px;
+}
+
 h3 {
     font-weight: 100;
     margin-bottom: 0px;
     justify-self: center;
+    font-size: 40px;
 }
 
 @media (max-width: 1200px) {
@@ -51,5 +59,13 @@ h3 {
 
     .photo-container {
         margin-top: -16px;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    h3 {
+        font-size: 32px;
     }
 }

@@ -7,7 +7,7 @@
 
 :root {
     --bg-primary: #8DA3D3;
-    --bg-secondary: #d0dcf4;
+    --bg-secondary: #fed8ff;
     --bg-elevated: #f2e1e3;
 
     --text-primary: #0756F2;
@@ -88,7 +88,7 @@ h2 {
 }
 
 button.form-button {
-    background: var(--bg-elevated);
+    background: var(--bg-secondary);
     color: var(--text-primary);
     border: 1px solid var(--border-strong);
     padding: 0.75rem 1.5rem;
@@ -107,13 +107,13 @@ button.form-button {
 }
 
 button.form-button:not(:disabled):hover {
-    border-color: var(--accent);
-    color: var(--accent);
+    // border-color: var(--accent);
+    // color: white;
 }
 
 button.form-button:disabled {
     background: var(--bg-secondary);
-    color: var(--text-secondary);
+    color: var(--bg-primary);
     cursor: default;
 }
 
